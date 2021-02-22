@@ -1,0 +1,24 @@
+server:
+  http:
+    host: "127.0.0.1"
+    port: "8080"
+
+logger:
+  path: "/log/log.txt"
+  level: "debug"
+
+db:
+  postgres:
+    dialect: "postgres"
+    dsn: "host=postgres port=5432 dbname=db user=db password=db sslmode=disable"
+  memory:
+    maxsize: 20
+
+kafka:
+  address: "kafka:9092"
+  batchtimeout: "30ms"
+  dialertimeout: "30s"
+  group: "main_group"
+
+repository:
+  type: "postgres"
